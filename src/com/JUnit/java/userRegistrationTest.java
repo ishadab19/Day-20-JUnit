@@ -32,13 +32,6 @@ public class userRegistrationTest {
 	}
 
 	@Test
-	public void givenFirstName_WhenNotProper_ShouldReturnFalse() {
-		boolean result = userRegistration.firstName("shadab");
-		Assert.assertEquals(false, result);
-
-	}
-
-	@Test
 	public void givenEmail_WhenProper_ShouldReturnTrue() {
 		boolean result = userRegistration.email("shadab@gmail.com");
 		Assert.assertEquals(true, result);
