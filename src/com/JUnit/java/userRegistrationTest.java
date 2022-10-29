@@ -1,5 +1,7 @@
 package com.JUnit.java;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -31,7 +33,6 @@ public class userRegistrationTest {
 		Assert.assertEquals(false, result);
 	}
 
-
 	@Test
 	public void givenEmail_WhenProper_ShouldReturnTrue() {
 		boolean result = userRegistration.email("shadab@gmail.com");
@@ -54,4 +55,54 @@ public class userRegistrationTest {
 		 boolean result = userRegistration.mobileNumber("5647891233");
 		 Assert.assertEquals(false, result);
 	 }
+	 @Test
+	    public void givenPassword_WhenProper_ShouldReturnTrue(){
+		 boolean result = userRegistration.password("Qwertyuiop");
+		 Assert.assertEquals(true, result);
+	 }
+	 @Test
+	    public void givenPassword_WhenNotProper_ShouldReturnFalse(){
+		 boolean result = userRegistration.password("qwertyyuuiop");
+		 Assert.assertEquals(false, result);
+	 }
+	 @Test
+	    public void givenPasswordRule2_WhenProper_ShouldReturnTrue(){
+		 boolean result = userRegistration.password2("Qwertyu19");
+		 Assert.assertEquals(true, result);
+	 }
+	 @Test
+	    public void givenPasswordRule2_WhenNotProper_ShouldReturnFalse(){
+		 boolean result = userRegistration.password2("qwerrty");
+		 Assert.assertEquals(false, result);
+	 }
+	 @Test
+	    public void givenPasswordRule3_WhenProper_ShouldReturnTrue(){
+		 boolean result = userRegistration.password3("qwertyuio");
+		 Assert.assertEquals(true, result);
+	 }
+	 @Test
+	    public void givenPasswordRule3_WhenNotProper_ShouldReturnFalse(){
+		 boolean result = userRegistration.password3("qwertyuioggggp");
+		 Assert.assertEquals(false, result);
+	 }
+	 @Test
+	    public void givenPasswordRule4_WhenProper_ShouldReturnTrue(){
+		 boolean result = userRegistration.password4("Qwerty@12");
+		 Assert.assertEquals(true, result);
+	 }
+	 @Test
+	    public void givenPasswordRule4_WhenNotProper_ShouldReturnFalse(){
+		 boolean result = userRegistration.password4("Qwerty12");
+		 Assert.assertEquals(false, result);
+	 }
+	 @Test
+	    public void givenEmail8_WhenNotProper_ShouldReturnTrue() {
+	        boolean result = userRegistration.emailIdValidator("abc.xyz@bl.co.in");
+	        Assert.assertEquals(true, result);
+	    }
+	 @Test
+	    public void givenEmail9_WhenNotProper_ShouldReturnFalse() {
+	        boolean result = userRegistration.emailIdValidator("abc..2002@gmail.com");
+	        Assert.assertEquals(false, result);
+	    }
 }
