@@ -31,12 +31,6 @@ public class userRegistrationTest {
 		Assert.assertEquals(false, result);
 	}
 
-	@Test
-	public void givenFirstName_WhenNotProper_ShouldReturnFalse() {
-		boolean result = userRegistration.firstName("shadab");
-		Assert.assertEquals(false, result);
-
-	}
 
 	@Test
 	public void givenEmail_WhenProper_ShouldReturnTrue() {
@@ -49,4 +43,15 @@ public class userRegistrationTest {
 		boolean result = userRegistration.email("shadab&.com");
 		Assert.assertEquals(false, result);
 	}
+	
+	 @Test
+	    public void givenPhoneNumber_WhenProper_shouldReturnTrue() {
+		 boolean result = userRegistration.mobileNumber("917879219494");
+		 Assert.assertEquals(true, result);
+	 }
+	 @Test
+	    public void givenPhoneNumber_WhenNotProper_shouldReturnFalse() {
+		 boolean result = userRegistration.mobileNumber("5647891233");
+		 Assert.assertEquals(false, result);
+	 }
 }
