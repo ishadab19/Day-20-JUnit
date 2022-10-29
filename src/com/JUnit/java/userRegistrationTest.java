@@ -6,6 +6,7 @@ import junit.framework.Assert;
 
 public class userRegistrationTest {
 	 userRegistration userRegistration = new userRegistration();
+	 
 
 	    @Test
 	    public void givenFirstName_WhenProper_ShouldReturnTrue() {
