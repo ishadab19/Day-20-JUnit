@@ -7,14 +7,14 @@ public class userRegistrationTest {
     @Test
     public void givenFirstName_whenProper_ShouldReturnTrue() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.firstNameValidate("Krunali");
+        boolean result = userRegistrationRegEx.firstNameValidate("Shadab");
         Assert.assertTrue(result);
     }
 
     @Test
     public void givenFirstName_whenNotProper_ShouldReturnFalse() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.firstNameValidate("krunali");
+        boolean result = userRegistrationRegEx.firstNameValidate("Shadab");
         Assert.assertFalse(result);
     }
 
@@ -49,14 +49,14 @@ public class userRegistrationTest {
     @Test
     public void givenPhone_whenProper_ShouldReturnTrue() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.phoneNumberValidate("91 9561272972");
+        boolean result = userRegistrationRegEx.phoneNumberValidate("91 7879219494");
         Assert.assertTrue(result);
     }
 
     @Test
     public void givenPhone_whenNotProper_ShouldReturnFalse() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.phoneNumberValidate("9561272972");
+        boolean result = userRegistrationRegEx.phoneNumberValidate("7879219494");
         Assert.assertFalse(result);
     }
 
@@ -70,7 +70,7 @@ public class userRegistrationTest {
     @Test
     public void givenPassword_whenNotProper_ShouldReturnFalse() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.passwordValidate("Kruna23#%");
+        boolean result = userRegistrationRegEx.passwordValidate("Shadab23#%");
         Assert.assertFalse(result);
     }
 }
