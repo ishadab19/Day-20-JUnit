@@ -21,14 +21,14 @@ public class userRegistrationTest {
     @Test
     public void givenLastName_whenProper_ShouldReturnTrue() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.lastNameValidate("Lole");
+        boolean result = userRegistrationRegEx.lastNameValidate("Hussain");
         Assert.assertTrue(result);
     }
 
     @Test
     public void givenLastName_whenNotProper_ShouldReturnFalse() {
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.lastNameValidate("lol");
+        boolean result = userRegistrationRegEx.lastNameValidate("hussain");
         Assert.assertFalse(result);
     }
 
