@@ -7,7 +7,7 @@ public class InvalidUserInputException extends Exception {
     public void givenFirstName_whenProper_ShouldReturnTrue() {
         try {
             userRegistration userRegistrationRegEx = new userRegistration();
-            boolean result = userRegistrationRegEx.firstNameValidate("Krunali");
+            boolean result = userRegistrationRegEx.firstNameValidate("shadab");
             Assert.assertTrue(result);
         } catch (Exception e) {
         }
@@ -17,7 +17,7 @@ public class InvalidUserInputException extends Exception {
     public void givenFirstName_whenNotProper_ShouldReturnFalse() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.firstNameValidate("krunali");
+        boolean result = userRegistrationRegEx.firstNameValidate("Shadab");
         Assert.assertFalse(result);
     } catch (Exception e) {
         }
@@ -27,7 +27,7 @@ public class InvalidUserInputException extends Exception {
     public void givenLastName_whenProper_ShouldReturnTrue() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.lastNameValidate("Lole");
+        boolean result = userRegistrationRegEx.lastNameValidate("Hussain");
         Assert.assertTrue(result);
     } catch (Exception e) {
     }
@@ -37,7 +37,7 @@ public class InvalidUserInputException extends Exception {
     public void givenLastName_whenNotProper_ShouldReturnFalse() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.lastNameValidate("lol");
+        boolean result = userRegistrationRegEx.lastNameValidate("Hussain");
         Assert.assertFalse(result);
     } catch (Exception e) {
         }
@@ -67,7 +67,7 @@ public class InvalidUserInputException extends Exception {
     public void givenPhone_whenProper_ShouldReturnTrue() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.phoneNumberValidate("91 9561272972");
+        boolean result = userRegistrationRegEx.phoneNumberValidate("91 7879219494");
         Assert.assertTrue(result);
         } catch (Exception e) {
         }
@@ -77,7 +77,7 @@ public class InvalidUserInputException extends Exception {
     public void givenPhone_whenNotProper_ShouldReturnFalse() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.phoneNumberValidate("9561272972");
+        boolean result = userRegistrationRegEx.phoneNumberValidate("7879219494");
         Assert.assertFalse(result);
         } catch (Exception e) {
         }
@@ -97,7 +97,7 @@ public class InvalidUserInputException extends Exception {
     public void givenPassword_whenNotProper_ShouldReturnFalse() {
         try{
         userRegistration userRegistrationRegEx = new userRegistration();
-        boolean result = userRegistrationRegEx.passwordValidate("Kruna23#%");
+        boolean result = userRegistrationRegEx.passwordValidate("Shadab23#%");
         Assert.assertFalse(result);
         } catch (Exception e) {
         }
