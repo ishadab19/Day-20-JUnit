@@ -62,14 +62,14 @@ public class userRegistrationTest {
 
 	@Test
 	public void test_firstName_Cases() {
-		List<Boolean> result = firstNameTestCases.apply(Arrays.asList("Krunali"));
+		List<Boolean> result = firstNameTestCases.apply(Arrays.asList("Shadab"));
 		List<Boolean> expected = Arrays.asList(true);
 		assertEquals(expected, result);
 	}
 
 	@Test
 	public void test_lastName_Cases() {
-		List<Boolean> result = lastNameTestCases.apply(Arrays.asList("Lole"));
+		List<Boolean> result = lastNameTestCases.apply(Arrays.asList("Hussain"));
 		List<Boolean> expected = Arrays.asList(true);
 		assertEquals(expected, result);
 	}
@@ -83,14 +83,14 @@ public class userRegistrationTest {
 
 	@Test
 	public void test_phoneNumber_Cases() {
-		List<Boolean> result = phoneTestCases.apply(Arrays.asList("91 9561272972"));
+		List<Boolean> result = phoneTestCases.apply(Arrays.asList("91 7879219494"));
 		List<Boolean> expected = Arrays.asList(true);
 		assertEquals(expected, result);
 	}
 
 	@Test
 	public void test_password_Cases() {
-		List<Boolean> result = passwordTestCases.apply(Arrays.asList("Krunali@1999"));
+		List<Boolean> result = passwordTestCases.apply(Arrays.asList("Shadab@1999"));
 		List<Boolean> expected = Arrays.asList(true);
 		assertEquals(expected, result);
 	}
